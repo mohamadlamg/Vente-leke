@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "TikTok Sans";
+    list-style: none;
+    text-decoration: none;
+     
+}
+body{
+    display: grid;
+    overflow-x: hidden;
+    width: 100%;
+    height: 1800px;
+    grid-template-rows: 6% 54% 30% 10%;
+    row-gap: 5px;
+    grid-area: "header","main","article","footer";
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border: 1px solid rgb(244, 248, 243);
+    width: 100%;
+    animation: haut 1.2s linear;
+    
+}
+@keyframes haut{
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.en-tête{
+    display: grid;
+    grid-template-columns: 20% 50% 10% 20%;
+    column-gap: 20px;
+    
+}
+.logo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px,4vw,24px);
+    margin-top: 10px;
+}
+
+.icon-menu{
+    display: none;
+    font-size: clamp(28px,3vw,35px);
+    text-align: center;
+    padding-top: 20px;
+}
+.icon-menu a i{
+    color: black;
+}
+
+
+.list-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px,2vw,21px);
+}
+.list-items li{
+    margin: 28px 30px;
+    
+}
+
+
+
+
+
+.list-items li a{
+    color: black;
+    font-weight: 600;
+     
+}
+.list-items li a:hover{
+    text-decoration: underline;
+}
+
+.icon-whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-whatsapp a i{
+    color: green;
+    font-size: clamp(31px,3vw,35px);
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+main{
+     
+    display: grid;
+    grid-template-rows: 45% 55%;
+    row-gap: 5px;
+    /* overflow-y: hidden; */
+    width: 100%;
+     
+}
+.presentation{
+     
+    background-image: url(/\ Images/\ zara.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px 1px;
+}
+.contenant{
+    color: white;
+    background-color: rgba(27, 25, 25, 0.596);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+    
+
+}
+.contenant h2{
+    font-size: clamp(25px,10vw,40px);
+    animation: coul 1s ease;
+}
+.contenant p{
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: clamp(18px,3vw,22px);
+    animation: coul 2s ease;
+}
+.contenant button{
+    height: 45px;
+    width: 180px;
+    border-radius: 25px;
+    border: none;
+    font-size: clamp(18px,0.5vw,19px);
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    animation: coul 3s ease;
+}
+
+@keyframes coul{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.contenant button:hover{
+    background-color: white;
+    color: green;
+    transform: translateY(-2px);
+    transition: all 0.5s ease;
+}
+
+
+.produits{
+     
+    padding-top: 65px ;
+    padding-left: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    animation: bas 2s ease;
+    
+     
+}
+
+@keyframes bas{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.boite-produit{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 3px;
+   width: 235px;
+   padding: 5px 10px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   height: 300px;
+   
+    
+    
+}
+.boite-produit:hover{
+    transform: scale(1.01);
+    transition: all 0.5s linear;
+}
+
+.boite-produit img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50% 50%;
+}
+.boite-produit h2{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.boite-produit h3{
+    font-weight: 480;
+    color: green;
+}
+.boite-produit button{
+    height: 36px;
+    width: 120px;
+    font-size: clamp(16px,0.2vw,19px);
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+
+
+
+
+article{
+     
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+     
+     
+}
+.commentaires{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    row-gap: 15px;
+    
+}
+.titre{
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(23px,1vw,29px);
+    font-weight: 200;
+     
+    
+}
+.propos{
+   
+    /* height: 100%; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+.boite-propos{
+    max-width: 340px;
+    max-height: 290px;
+    padding: 26px 10px;
+    margin-left: 45px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    row-gap: 20px;
+}
+
+.boite-propos:hover{
+    transform: scale(1.02);
+    transition: all  0.8s linear;
+}
+
+.homme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    gap: 10px;
+}
+.homme img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50%;
+    
+}
+.paroles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.etoiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.etoiles a i{
+    color: green;
+    font-size: clamp(19px,1vw,21px);
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: green;
+    color: white;
+    width: 100%;
+    border-radius: 18px 18px 0px 0px;
+     
+    
+}
+.fin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     
+}
+.localisation{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 500;
+     
+}
+.lieu{
+    margin-bottom: 10px;
+}
+.localisation a i{
+    color: white;
+}
+
+.prochain{
+    text-align: center;
+    padding-top: 15px;
+}
+.prochain h2{
+    font-size: clamp(15px,0.5vw,16px);
+}
+.prochain button{
+    width: 150px;
+    height: 45px;
+    margin-top: 5px;
+    border-radius: 25px;
+    border: none;
+    color: green;
+    background-color: white;
+    font-size: clamp(15px,0.5vw,16px);
+    font-weight: 600;
+
+}
+.prochain button:hover{
+    background-color: green;
+    color: white;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+
+
+@media(max-width:768px){
+    .icon-menu{
+        display: block;
+       
+    }
+    .en-tête{
+        grid-template-columns: 50% 25% 25%;
+        column-gap: 20px;
+    }
+    .logo{
+        margin-top: 18px;
+    }
+    .icon-whatsapp {
+        margin-left: -10px;
+         padding-right: 30px;
+         padding-top: 15px;
+    }
+    .produits{
+        grid-template-columns: 1fr;
+        gap: 5px;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        padding-left: 65px;
+    }
+    .propos{
+        top: 0;
+        grid-template-columns: 1fr;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        padding-left: 20px;
+
+    }
+    .boite-propos{
+        margin-left: 10px;
+        padding: 0;
+        
+    }
+    .list-items{
+        flex-direction: column;
+        width: 100%;
+        height: 60vh;
+        position: absolute;
+        top: 105px;
+        margin-top: 8px;
+        margin-left: 0px;
+        left: -100%;
+        padding-top: 3.5rem;
+        /* background-color: white; */
+        backdrop-filter: blur(4px);
+        transition: .5s ease-in-out;
+        
+    }
+
+    .list-items li a{
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        
+        
+        
+    }
+    
+    .active{
+        left: 0;
+    }
+    
+     
+     
+}
